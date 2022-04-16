@@ -1,0 +1,100 @@
+# sudo apt-get install -y xclip
+# remap prefix from 'C-b' to 'C-a'
+# unbind C-b
+set-option -g prefix C-f
+bind-key C-f send-prefix
+
+# Enable mouse mode (tmux 2.1 and above)
+set -g mouse on
+
+set-option -g history-limit 5000
+
+bind-key "|" split-window -fh -c "#{pane_current_path}"
+bind-key "\\" split-window -h -c "#{pane_current_path}"
+
+bind-key "-" split-window -v -c "#{pane_current_path}"
+bind-key "_" split-window -fv -c "#{pane_current_path}"
+
+bind-key Space last-window
+
+bind-key C-f switch-client -l
+
+# Linux only
+set -g mouse on
+bind -n WheelUpPane if-shell -F -t = "#{mouse_any_flag}" "send-keys -M" "if -Ft= '#{pane_in_mode}' 'send-keys -M' 'select-pane -t=; copy-mode -e; send-keys -M'"
+bind -n WheelDownPane select-pane -t= \; send-keys -M
+bind -n C-WheelUpPane select-pane -t= \; copy-mode -e \; send-keys -M
+bind -T copy-mode-vi    C-WheelUpPane   send-keys -X halfpage-up
+bind -T copy-mode-vi    C-WheelDownPane send-keys -X halfpage-down
+bind -T copy-mode-emacs C-WheelUpPane   send-keys -X halfpage-up
+bind -T copy-mode-emacs C-WheelDownPane send-keys -X halfpage-down
+# To copy, left click and drag to highlight text in yellow,
+# once you release left click yellow text will disappear and will automatically be available in clibboard
+# # Use vim keybindings in copy mode
+setw -g mode-keys vi
+# Update default binding of `Enter` to also use copy-pipe
+unbind -T copy-mode-vi Enter
+bind-key -T copy-mode-vi Enter send-keys -X copy-pipe-and-cancel "xclip -selection c"
+bind-key -T copy-mode-vi MouseDragEnd1Pane send-keys -X copy-pipe-and-cancel "xclip -in -selection clipboard"
+
+#CheatSheet
+
+#SESSION
+
+#tmux new -s myses 	##Start a new session with the name *myses*
+
+#tmux kill-ses -t mysession
+
+#tmux ls
+
+#tmux a 	## Attach to last session
+
+#tmux a -t mysession
+
+#Prefix  ( 	##Move to previous session
+
+#Prefix  ) 	## Move to next session
+
+#WINDOW
+
+#Prefix c	## Create window
+
+#Prefix  ,	## Rename current window
+
+#Prefix  &	## Close current window
+
+#Prefix  p	## Previous window
+
+#Prefix  n	## Next window
+
+#Prefix  space 	## Toggle windows
+
+#Prefix  0 ... 9
+
+#PANES
+
+#Prefix  x	## Close pane 	
+
+#Prefix  ;	## Toggle last active pane
+
+#Prefix  - or _
+
+#Prefix  | or \
+
+#COPY MODE 
+
+#Prefix  [	 ## Enter copy mode
+
+#q	 ## Quit mode
+
+#g	 ## Go to top line
+
+#G	 ## Go to bottom line
+
+#/	 ## Search forward
+
+#?	 ## Search backward
+
+#n	 ## Next keyword occurance
+
+#N	 ## Previous keyword occurance
