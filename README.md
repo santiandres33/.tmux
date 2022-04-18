@@ -30,9 +30,10 @@ proper `~/.tmux.conf` symlink and you copy the `.tmux.conf.local` sample file in
 your home directory:
 
 ```
-$ git clone https://github.com/santiandres33/.tmux.git /etc/oh-my-tmux
-$ ln -s -f /etc/oh-my-tmux/.tmux.conf ~/.tmux.conf
-$ cp /etc/oh-my-tmux/.tmux.conf.local ~/.tmux.conf.local
+apt install xclip
+git clone https://github.com/santiandres33/.tmux.git /etc/oh-my-tmux
+ln -s -f /etc/oh-my-tmux/.tmux.conf ~/.tmux.conf
+cp /etc/oh-my-tmux/.tmux.conf.local ~/.tmux.conf.local
 ```
 
 Then proceed to [customize] your `~/.tmux.conf.local` copy.
