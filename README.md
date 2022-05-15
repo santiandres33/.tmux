@@ -6,9 +6,11 @@ https://github.com/ohmyzsh/ohmyzsh#using-oh-my-zsh
 Basic Installation
 Oh My Zsh is installed by running one of the following commands in your terminal. You can install this via the command-line with either curl, wget or another similar tool.
 
-Method	Command
-curl	sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+Method Curl Command 
 
+```
+sh -c $(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)
+```
 
 Note that any previous .zshrc will be renamed to .zshrc.pre-oh-my-zsh. After installation, you can move the configuration you want to preserve into the new .zshrc.
 
@@ -24,8 +26,7 @@ Installation
 
 Requirements:
 
-  - tmux **`>= 2.3`** (soon `>= 2.4`) running inside Linux, Mac, OpenBSD, Cygwin
-    or WSL
+  - tmux **`>= 2.3`** (soon `>= 2.4`) running inside Linux, Mac, OpenBSD, Cygwin or WSL
   - awk, perl and sed
   - outside of tmux, `$TERM` must be set to `xterm-256color`
 
@@ -43,28 +44,6 @@ existing `~/.tmux.conf` first)
 
 ```
 $ sudo apt update && sudo apt install cmake tmux git xclip -y && sudo git clone https://github.com/santiandres33/.tmux.git /etc/oh-my-tmux && ln -s -f /etc/oh-my-tmux/.tmux.conf ~/.tmux.conf && cp /etc/oh-my-tmux/.tmux.conf.local ~/.tmux.conf.local
-```
-
-
-
-
-
-```
-$ cd
-$ git clone https://github.com/santiandres33/.tmux.git
-$ ln -s -f .tmux/.tmux.conf
-$ cp .tmux/.tmux.conf.local .
-```
-
-💡 You can clone the repository anywhere you want, provided you create the
-proper `~/.tmux.conf` symlink and you copy the `.tmux.conf.local` sample file in
-your home directory:
-
-```
-apt install xclip
-git clone https://github.com/santiandres33/.tmux.git /etc/oh-my-tmux
-ln -s -f /etc/oh-my-tmux/.tmux.conf ~/.tmux.conf
-cp /etc/oh-my-tmux/.tmux.conf.local ~/.tmux.conf.local
 ```
 
 Then proceed to [customize] your `~/.tmux.conf.local` copy.
