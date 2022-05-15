@@ -43,7 +43,7 @@ To install, run the following from your terminal: (you may want to backup your
 existing `~/.tmux.conf` first)
 
 ```
-$ sudo apt update && sudo apt install cmake tmux git xclip -y && sudo git clone https://github.com/santiandres33/.tmux.git /etc/oh-my-tmux && ln -s -f /etc/oh-my-tmux/.tmux.conf ~/.tmux.conf && cp /etc/oh-my-tmux/.tmux.conf.local ~/.tmux.conf.local
+sudo apt update && sudo apt install cmake tmux git xclip -y && sudo git clone https://github.com/santiandres33/.tmux.git /etc/oh-my-tmux && ln -s -f /etc/oh-my-tmux/.tmux.conf ~/.tmux.conf && cp /etc/oh-my-tmux/.tmux.conf.local ~/.tmux.conf.local
 ```
 
 Then proceed to [customize] your `~/.tmux.conf.local` copy.
