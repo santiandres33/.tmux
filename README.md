@@ -9,7 +9,7 @@ Oh My Zsh is installed by running one of the following commands in your terminal
 Method Curl Command 
 
 ```
-sh -c $(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)
+sh -c $(curl -fsSL https://raw.githubusercontent.com/santiandres33/ohmyzsh/master/tools/install.sh)
 ```
 
 Note that any previous .zshrc will be renamed to .zshrc.pre-oh-my-zsh. After installation, you can move the configuration you want to preserve into the new .zshrc.
