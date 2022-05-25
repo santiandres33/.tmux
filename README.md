@@ -1,7 +1,7 @@
 .Oh My Zsh
 ==========
 
-https://github.com/ohmyzsh/ohmyzsh#using-oh-my-zsh
+https://github.com/santiandres33/ohmyzsh
 
 Basic Installation
 Oh My Zsh is installed by running one of the following commands in your terminal. You can install this via the command-line with either curl, wget or another similar tool.
