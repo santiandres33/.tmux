@@ -198,9 +198,7 @@ tmux_conf_theme_right_separator_main='\uE0B2'
 tmux_conf_theme_right_separator_sub='\uE0B3'
 ```
 ## Additional Configurations
-
 ### Add the following to your ~/.bashrc:
-
 ```
   HISTCONTROL=ignoredups:erasedups 
   HISTSIZE=50000
@@ -208,8 +206,6 @@ tmux_conf_theme_right_separator_sub='\uE0B3'
   #Keeping the same history along different terminal panes/windows/tabs
   #PROMPT_COMMAND="${PROMPT_COMMAND:+$PROMPT_COMMAND$'\n'}history -a; history -c; history -r"
 ```
-
-
 
 ## Oh-My-Zsh Favorite themes
 
@@ -219,12 +215,10 @@ Edit in ~/.zshrc
 ```
 https://github.com/santiandres33/ohmyzsh/blob/master/themes/tjkirch.zsh-theme
 ```
-
 ### Xiong-chiamiov-plus
 ```
 https://github.com/santiandres33/ohmyzsh/blob/master/themes/xiong-chiamiov-plus.zsh-theme
 ```
-
 ### Kali
 ```
 https://github.com/santiandres33/ohmyzsh/blob/master/custom/themes/kali.zsh-theme
