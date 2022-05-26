@@ -35,15 +35,6 @@ Self-contained, pretty and versatile `.tmux.conf` configuration file.
 Installation
 ------------
 
-Pre-requirements
-
-#Add the following to your ~/.bashrc:
-
-  HISTCONTROL=ignoredups:erasedups 
-
-  PROMPT_COMMAND="${PROMPT_COMMAND:+$PROMPT_COMMAND$'\n'}history -a; history -c; history -r"
-
-
 To install, run the following from your terminal: (you may want to backup your
 existing `~/.tmux.conf` first)
 
