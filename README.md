@@ -1,11 +1,4 @@
 
-#Add the following to your ~/.bashrc:
-
-  HISTCONTROL=ignoredups:erasedups 
-
-  PROMPT_COMMAND="${PROMPT_COMMAND:+$PROMPT_COMMAND$'\n'}history -a; history -c; history -r"
-
-
 .Oh My Zsh
 ==========
 
@@ -56,7 +49,6 @@ Development][bhtmux2] by [@bphogan].
 [@bphogan]: https://twitter.com/bphogan
 
 
-
 Features
 --------
 
@@ -92,55 +84,72 @@ Features
 
 ![Mouse mode](https://cloud.githubusercontent.com/assets/553208/9890797/8dffe542-5c02-11e5-9c06-a25b452e6fcc.gif)
 
-Bindings
+Cheatshhet Oh-My-Tmux
 --------
 
+#CheatSheet
 
+#SESSION
+#tmux new -s myses 	##Start a new session with the name *myses*
+#tmux kill-ses -t mysession
+#tmux ls
+#tmux a 	## Attach to last session
+#tmux a -t mysession
+#Prefix  ( 	##Move to previous session
+#Prefix  ) 	## Move to next session
+#Prefic C - c ## Creates new session
 
-This configuration uses the following bindings:
+#WINDOW
+
+#Prefix c	## Create window
+#Prefix  ,	## Rename current window
+#Prefix  &	## Close current window
+#Prefix  p	## Previous window
+#Prefix  n	## Next window
+#Prefix  space 	## Toggle windows
+#Prefix  0 ... 9
+
+#PANES
+
+#Prefix  x	## Close pane 	
+#Prefix  ;	## Toggle last active pane
+#Prefix  - or _
+#Prefix  | or \
+
+#COPY MODE 
+
+#Prefix  [	 ## Enter copy mode
+#q	 ## Quit mode
+#g	 ## Go to top line
+#G	 ## Go to bottom line
+#/	 ## Search forward
+#?	 ## Search backward
+#n	 ## Next keyword occurance
+#N	 ## Previous keyword occurance
+#v   ##begins selection / visual mode
+#C-v ## toggles between blockwise visual mode and visual mode
+#H   ##jumps to the start of line
+#L   ##jumps to the end of line
+#y   ##copies the selection to the top paste-buffer
+#Escape ##cancels the current operation
+
+#Others
 
  - `<prefix> e` opens `~/.tmux.conf.local` with the editor defined by the
    `$EDITOR` environment variable (defaults to `vim` when empty)
  - `<prefix> r` reloads the configuration
  - `C-l` clears both the screen and the tmux history
-
- - `<prefix> C-c` creates a new session
- - `<prefix> C-f` lets you switch to another session by name
-
  - `<prefix> C-h` and `<prefix> C-l` let you navigate windows (default
-   `<prefix> n` and `<prefix> p` are unbound)
  - `<prefix> Tab` brings you to the last active window
-
- - `<prefix> -` splits the current pane vertically
- - `<prefix> _` splits the current pane horizontally
- - `<prefix> h`, `<prefix> j`, `<prefix> k` and `<prefix> l` let you navigate
-   panes ala Vim
- - `<prefix> H`, `<prefix> J`, `<prefix> K`, `<prefix> L` let you resize panes
  - `<prefix> <` and `<prefix> >` let you swap panes
  - `<prefix> +` maximizes the current pane to a new window
-
  - `<prefix> m` toggles mouse mode on or off
-
- - `<prefix> U` launches Urlview (if available)
- - `<prefix> F` launches Facebook PathPicker (if available)
-
- - `<prefix> Enter` enters copy-mode
  - `<prefix> b` lists the paste-buffers
  - `<prefix> p` pastes from the top paste-buffer
  - `<prefix> P` lets you choose the paste-buffer to paste from
 
-Additionally, `copy-mode-vi` matches [my own Vim configuration][]
 
-[my own Vim configuration]: https://github.com/gpakosz/.vim.git
 
-Bindings for `copy-mode-vi`:
-
-- `v` begins selection / visual mode
-- `C-v` toggles between blockwise visual mode and visual mode
-- `H` jumps to the start of line
-- `L` jumps to the end of line
-- `y` copies the selection to the top paste-buffer
-- `Escape` cancels the current operation
 
 Configuration
 -------------
@@ -156,9 +165,6 @@ you can adjust to alter different behaviors. Pressing `<prefix> e` will open
 variable (defaults to `vim` when empty).
 
 ### Enabling the Powerline look
-
-Powerline originated as a status-line plugin for Vim. Its popular eye-catching
-look is based on the use of special symbols: <img width="80" alt="Powerline Symbols" style="vertical-align: middle;" src="https://cloud.githubusercontent.com/assets/553208/10687156/1b76dda6-796b-11e5-83a1-1634337c4571.png" />
 
 To make use of these symbols, there are several options:
 
@@ -188,22 +194,37 @@ tmux_conf_theme_left_separator_sub='\uE0B1'
 tmux_conf_theme_right_separator_main='\uE0B2'
 tmux_conf_theme_right_separator_sub='\uE0B3'
 ```
+### Additional Configurations
 
-### Accessing the macOS clipboard from within tmux sessions (tmux `< 2.6`)
+#Add the following to your ~/.bashrc:
 
-[Chris Johnsen created the `reattach-to-user-namespace`
-utility][reattach-to-user-namespace] that makes `pbcopy` and `pbpaste` work
-again within tmux.
-
-To install `reattach-to-user-namespace`, use either [MacPorts][] or
-[Homebrew][]:
-
-    $ port install tmux-pasteboard
-
-or
-
-    $ brew install reattach-to-user-namespace
-
-Once installed, `reattach-to-usernamespace` will be automatically detected.
+```
+  HISTCONTROL=ignoredups:erasedups 
+  HISTSIZE=50000
+  SAVEHIST=20000
+  #Keeping the same history along different terminal panes/windows/tabs
+  #PROMPT_COMMAND="${PROMPT_COMMAND:+$PROMPT_COMMAND$'\n'}history -a; history -c; history -r"
+```
 
 
+Custom themes
+
+Tjkirch 
+```
+https://github.com/santiandres33/ohmyzsh/blob/master/themes/tjkirch.zsh-theme
+```
+
+Xiong-chiamiov-plus
+```
+https://github.com/santiandres33/ohmyzsh/blob/master/themes/xiong-chiamiov-plus.zsh-theme
+```
+
+Kali
+```
+https://github.com/santiandres33/ohmyzsh/blob/master/custom/themes/kali.zsh-theme
+```
+
+ plugins=(nmap git docker zsh-completions zsh-autosuggestions)
+ 
+ 
+ 
