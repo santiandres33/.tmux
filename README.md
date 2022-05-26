@@ -1,3 +1,11 @@
+
+#Add the following to your ~/.bashrc:
+
+  HISTCONTROL=ignoredups:erasedups 
+
+  PROMPT_COMMAND="${PROMPT_COMMAND:+$PROMPT_COMMAND$'\n'}history -a; history -c; history -r"
+
+
 .Oh My Zsh
 ==========
 
@@ -5,6 +13,9 @@
 
 Basic Installation
 Oh My Zsh is installed by running one of the following commands in your terminal. You can install this via the command-line with either curl, wget or another similar tool.
+
+Installation
+------------
 
 Method Curl Command 
 
@@ -14,7 +25,7 @@ sh -c $(curl -fsSL https://raw.githubusercontent.com/santiandres33/ohmyzsh/maste
 
 Note that any previous .zshrc will be renamed to .zshrc.pre-oh-my-zsh. After installation, you can move the configuration you want to preserve into the new .zshrc.
 
-.tmux
+.Oh My Tmux
 =====
 
 Self-contained, pretty and versatile `.tmux.conf` configuration file.
@@ -23,12 +34,6 @@ Self-contained, pretty and versatile `.tmux.conf` configuration file.
 
 Installation
 ------------
-
-Requirements:
-
-  - tmux **`>= 2.3`** (soon `>= 2.4`) running inside Linux, Mac, OpenBSD, Cygwin or WSL
-  - awk, perl and sed
-  - outside of tmux, `$TERM` must be set to `xterm-256color`
 
 Pre-requirements
 
@@ -59,59 +64,12 @@ Development][bhtmux2] by [@bphogan].
 [bhtmux2]: https://pragprog.com/book/bhtmux2/tmux-2
 [@bphogan]: https://twitter.com/bphogan
 
-Troubleshooting
----------------
 
- - **I'm running tmux `HEAD` and things don't work properly. What should I do?**
-
-   Please open an issue describing what doesn't work with upcoming tmux. I'll do
-   my best to address it.
-
- - **Status line is broken and/or gets duplicated at the bottom of the screen.
-   What gives?**
-
-   This particularly happens on Linux when the distribution provides a version
-   of glib that received Unicode 9.0 upgrades (glib `>= 2.50.1`) while providing
-   a version of glibc that didn't (glibc `< 2.26`). You may also configure
-   `LC_CTYPE` to use an `UTF-8` locale. Typically VTE based terminal emulators
-   rely on glib's `g_unichar_iswide()` function while tmux relies on glibc's
-   `wcwidth()` function. When these two functions disagree, display gets messed
-   up.
-
-   This can also happen on macOS when using iTerm2 and "Use Unicode version 9
-   character widths" is enabled in `Preferences... > Profiles > Text`
-
-   For that reason, the default `~/.tmux.conf.local` file stopped using Unicode
-   characters for which width changed in between Unicode 8.0 and 9.0 standards,
-   as well as Emojis.
-
- - **I installed Powerline and/or (patched) fonts but can't see Powerline
-   symbols.**
-
-   First, you don't need to install Powerline. You only need fonts patched with
-   Powerline symbols or the standalone `PowerlineSymbols.otf` font. Then make
-   sure your `~/.tmux.conf.local` copy uses the right code points for
-   `tmux_conf_theme_left_separator_XXX` values.
-
- - **I'm using Bash On Windows (WSL), colors and Powerline look are broken.**
-
-   There is currently a [bug][1681] in the new console powering Bash On Windows
-   preventing text attributes (bold, underscore, ...) to combine properly with
-   colors. The workaround is to search your `~/.tmux.conf.local` copy and
-   replace attributes with `'none'`.
-
-   Also, until Window's console replaces its GDI based render with a DirectWrite
-   one, Powerline symbols will be broken.
-
-   The alternative is to use the [Mintty terminal for WSL][wsltty].
-
-[1681]: https://github.com/Microsoft/BashOnWindows/issues/1681
-[wsltty]: https://github.com/mintty/wsltty
 
 Features
 --------
 
- - `C-a` acts as secondary prefix, while keeping default `C-b` prefix
+ - `C-f` acts as secondary prefix, while keeping default `C-b` prefix
  - visual theme inspired by [Powerline][]
  - [maximize any pane to a new window with `<prefix> +`][maximize-pane]
  - SSH/Mosh aware username and hostname status line information
@@ -135,30 +93,18 @@ Features
 [Facebook PathPicker]: https://facebook.github.io/PathPicker/
 [Urlview]: https://packages.debian.org/stable/misc/urlview
 
-The "maximize any pane to a new window with `<prefix> +`" feature is different
-from builtin `resize-pane -Z` as it allows you to further split a maximized
-pane. It's also more flexible by allowing you to maximize a pane to a new
-window, then change window, then go back and the pane is still in maximized
-state in its own window. You can then minimize a pane by using `<prefix> +`
-either from the source window or the maximized window.
+
 
 ![Maximize pane](https://cloud.githubusercontent.com/assets/553208/9890858/ee3c0ca6-5c02-11e5-890e-05d825a46c92.gif)
 
-Mouse mode allows you to set the active window, set the active pane, resize
-panes and automatically switches to copy-mode to select text.
+
 
 ![Mouse mode](https://cloud.githubusercontent.com/assets/553208/9890797/8dffe542-5c02-11e5-9c06-a25b452e6fcc.gif)
 
 Bindings
 --------
 
-tmux may be controlled from an attached client by using a key combination of a
-prefix key, followed by a command key. This configuration uses `C-a` as a
-secondary prefix while keeping `C-b` as the default prefix. In the following
-list of key bindings:
-  - `<prefix>` means you have to either hit <kbd>Ctrl</kbd> + <kbd>a</kbd> or <kbd>Ctrl</kbd> + <kbd>b</kbd>
-  - `<prefix> c` means you have to hit <kbd>Ctrl</kbd> + <kbd>a</kbd> or <kbd>Ctrl</kbd> + <kbd>b</kbd> followed by <kbd>c</kbd>
-  - `<prefix> C-c` means you have to hit <kbd>Ctrl</kbd> + <kbd>a</kbd> or <kbd>Ctrl</kbd> + <kbd>b</kbd> followed by <kbd>Ctrl</kbd> + <kbd>c</kbd>
+
 
 This configuration uses the following bindings:
 
@@ -251,85 +197,6 @@ tmux_conf_theme_left_separator_sub='\uE0B1'
 tmux_conf_theme_right_separator_main='\uE0B2'
 tmux_conf_theme_right_separator_sub='\uE0B3'
 ```
-### Configuring the status line
-
-Contrary to the first iterations of this configuration, by now you have total
-control on the content and order of `status-left` and `status-right`.
-
-Edit your `~/.tmux.conf.local` copy (`<prefix> e`) and adjust the
-`tmux_conf_theme_status_left` and `tmux_conf_theme_status_right` variables to
-your own preferences.
-
-This configuration supports the following builtin variables:
-
- - `#{battery_bar}`: horizontal battery charge bar
- - `#{battery_percentage}`: battery percentage
- - `#{battery_status}`: is battery charging or discharging?
- - `#{battery_vbar}`: vertical battery charge bar
- - `#{circled_session_name}`: circled session number, up to 20
- - `#{hostname}`: SSH/Mosh aware hostname information
- - `#{hostname_ssh}`: SSH/Mosh aware hostname information, blank when not
-   connected to a remote server through SSH/Mosh
- - `#{loadavg}`: load average
- - `#{pairing}`: is session attached to more than one client?
- - `#{prefix}`: is prefix being depressed?
- - `#{root}`: is current user root?
- - `#{synchronized}`: are the panes synchronized?
- - `#{uptime_y}`: uptime years
- - `#{uptime_d}`: uptime days, modulo 365 when `#{uptime_y}` is used
- - `#{uptime_h}`: uptime hours
- - `#{uptime_m}`: uptime minutes
- - `#{uptime_s}`: uptime seconds
- - `#{username}`: SSH/Mosh aware username information
- - `#{username_ssh}`: SSH aware username information, blank when not connected
-   to a remote server through SSH/Mosh
-
-Beside custom variables mentioned above, the `tmux_conf_theme_status_left` and
-`tmux_conf_theme_status_right` variables support usual tmux syntax, e.g. using
-`#()` to call an external command that inserts weather information provided by
-[wttr.in]:
-```
-tmux_conf_theme_status_right='#{prefix}#{pairing}#{synchronized} #(curl -m 1 wttr.in?format=3 2>/dev/null; sleep 900) , %R , %d %b | #{username}#{root} | #{hostname} '
-```
-The `sleep 900` call makes sure the network request is issued at most every 15
-minutes whatever the value of `status-interval`.
-
-![Weather information from wttr.in](https://user-images.githubusercontent.com/553208/52175490-07797c00-27a5-11e9-9fb6-42eec4fe4188.png)
-
-[wttr.in]: https://github.com/chubin/wttr.in#one-line-output
-
-💡 You can also define your own custom variables. See the sample
-`.tmux.conf.local` file for instructions.
-
-Finally, remember `tmux_conf_theme_status_left` and
-`tmux_conf_theme_status_right` end up being given to tmux as `status-left` and
-`status-right` which means they're passed through `strftime()`. As such, the `%`
-character has a special meaning and needs to be escaped by doubling it, e.g.
-```
-tmux_conf_theme_status_right='#(echo foo %% bar)'
-```
-See `man 3 strftime`.
-
-### Using TPM plugins
-
-This configuration now comes with built-in [TPM] support:
-- use the `set -g @plugin ...` syntax to enable a plugin
-- whenever a plugin introduces a variable to be used in `status-left` or
-  `status-right`, you can use it in `tmux_conf_theme_status_left` and
-  `tmux_conf_theme_status_right` variables, see instructions above 👆
-- ⚠️ do not add `set -g @plugin 'tmux-plugins/tpm'`
-- ⚠️ do not add `run '~/.tmux/plugins/tpm/tpm'` to `~/.tmux.conf` or your
-- `~/.tmux.conf.local` copy ← people who are used to alter
-  `.tmux.conf` to add TPM support will have to adapt their configuration
-
-⚠️ The TPM bindings differ slightly from upstream:
-  - installing plugins: `<prefix> + I`
-  - uninstalling plugins: `<prefix> + Alt + u`
-  - updating plugins: `<prefix> + u`
-
-See `~/.tmux.conf.local` for instructions.
-
-[TPM]: https://github.com/tmux-plugins/tpm
 
 ### Accessing the macOS clipboard from within tmux sessions (tmux `< 2.6`)
 
@@ -348,34 +215,4 @@ or
 
 Once installed, `reattach-to-usernamespace` will be automatically detected.
 
-[MacPorts]: http://www.macports.org/
-[Homebrew]: http://brew.sh/
 
-### Using the configuration under Cygwin within Mintty
-
-**I don't recommend running this configuration with Cygwin anymore. Forking
-under Cygwin is extremely slow and this configuration issues a lot of
-`run-shell` commands under the hood. As such, you will experience high CPU
-usage. As an alternative consider using [Mintty terminal for WSL][wsltty].**
-
-![cygwin](https://cloud.githubusercontent.com/assets/553208/19741789/67a3f3d8-9bc2-11e6-9ecc-499fc0228ee6.png)
-
-It is possible to use this configuration under Cygwin within Mintty, however
-support for Unicode symbols and emojis lacks behind Mac and Linux.
-
-Particularly, Mintty's text rendering is implemented with GDI which has
-limitations:
-
-- color emojis are only available through DirectWrite starting with Windows 8.1
-- display of double width symbols, like the battery discharging symbol indicator
-  (U+1F50B) is buggy
-
-To get Unicode symbols displayed properly, you have to use [font linking].
-Open `regedit.exe` then navigate to the registry key at
-`HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\FontLink\SystemLink`
-and add a new entry for you preferred font to link it with the Segoe UI Symbol
-font.
-
-![regedit](https://cloud.githubusercontent.com/assets/553208/19741304/71a2f3ae-9bc0-11e6-96aa-4c09a812c313.png)
-
-[font linking]: https://msdn.microsoft.com/en-us/goglobal/bb688134.aspx
