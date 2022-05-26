@@ -2,6 +2,8 @@
 .Oh My Zsh
 ==========
 
+By @ohmyzsh
+
 [https://github.com/santiandres33/ohmyzsh](https://github.com/santiandres33/ohmyzsh#basic-installation)
 
 Basic Installation
@@ -20,6 +22,8 @@ Note that any previous .zshrc will be renamed to .zshrc.pre-oh-my-zsh. After ins
 
 .Oh My Tmux
 =====
+
+By @gpakosz
 
 Self-contained, pretty and versatile `.tmux.conf` configuration file.
 
