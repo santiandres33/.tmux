@@ -93,26 +93,18 @@ Cheatshhet Oh-My-Tmux
 
 ## Cheat Sheet
 
-# SESSION
-
+### SESSION
 - tmux new -s myses 	##Start a new session with the name *myses*
-
 - tmux kill-ses -t mysession
-
 - tmux ls
-
 - tmux a 	## Attach to last session
-
 - tmux a -t mysession
-
 - Prefix  ( 	##Move to previous session
-
 - Prefix  ) 	## Move to next session
-
 - Prefic C - c ## Creates new session
 
 
-# WINDOW
+### WINDOW
 - Prefix c	## Create window
 - Prefix  ,	## Rename current window
 - Prefix  &	## Close current window
@@ -121,13 +113,13 @@ Cheatshhet Oh-My-Tmux
 - Prefix  space 	## Toggle windows
 - Prefix  0 ... 9
 
-# PANES
+### PANES
 - Prefix  x	## Close pane 	
 - Prefix  ;	## Toggle last active pane
 - Prefix  - or _
 - Prefix  | or \
 
-# COPY MODE 
+### COPY MODE 
 - Prefix  [	 ## Enter copy mode
 
 - q	 ## Quit mode
@@ -144,7 +136,7 @@ Cheatshhet Oh-My-Tmux
 - y   ##copies the selection to the top paste-buffer
 - Escape ##cancels the current operation
 
-# Others
+### Others
 
  - `<prefix> e` opens `~/.tmux.conf.local` with the editor defined by the
    `$EDITOR` environment variable (defaults to `vim` when empty)
@@ -205,9 +197,9 @@ tmux_conf_theme_left_separator_sub='\uE0B1'
 tmux_conf_theme_right_separator_main='\uE0B2'
 tmux_conf_theme_right_separator_sub='\uE0B3'
 ```
-### Additional Configurations
+## Additional Configurations
 
-# Add the following to your ~/.bashrc:
+### Add the following to your ~/.bashrc:
 
 ```
   HISTCONTROL=ignoredups:erasedups 
@@ -219,26 +211,26 @@ tmux_conf_theme_right_separator_sub='\uE0B3'
 
 
 
-### Oh-My-Zsh Favorite themes
+## Oh-My-Zsh Favorite themes
 
 Edit in ~/.zshrc
 
-# Tjkirch 
+### Tjkirch 
 ```
 https://github.com/santiandres33/ohmyzsh/blob/master/themes/tjkirch.zsh-theme
 ```
 
-# Xiong-chiamiov-plus
+### Xiong-chiamiov-plus
 ```
 https://github.com/santiandres33/ohmyzsh/blob/master/themes/xiong-chiamiov-plus.zsh-theme
 ```
 
-# Kali
+### Kali
 ```
 https://github.com/santiandres33/ohmyzsh/blob/master/custom/themes/kali.zsh-theme
 ```
 
-### Oh-My-Zsh favorite plugins
+## Oh-My-Zsh favorite plugins
  plugins=(nmap git docker zsh-completions zsh-autosuggestions)
  
  
