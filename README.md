@@ -91,84 +91,60 @@ Features
 Cheatshhet Oh-My-Tmux
 --------
 
-#Cheat Sheet
+## Cheat Sheet
 
-#SESSION
+# SESSION
 
-#tmux new -s myses 	##Start a new session with the name *myses*
+- tmux new -s myses 	##Start a new session with the name *myses*
 
-#tmux kill-ses -t mysession
+- tmux kill-ses -t mysession
 
-#tmux ls
+- tmux ls
 
-#tmux a 	## Attach to last session
+- tmux a 	## Attach to last session
 
-#tmux a -t mysession
+- tmux a -t mysession
 
-#Prefix  ( 	##Move to previous session
+- Prefix  ( 	##Move to previous session
 
-#Prefix  ) 	## Move to next session
+- Prefix  ) 	## Move to next session
 
-#Prefic C - c ## Creates new session
+- Prefic C - c ## Creates new session
 
 
-#WINDOW
+# WINDOW
+- Prefix c	## Create window
+- Prefix  ,	## Rename current window
+- Prefix  &	## Close current window
+- Prefix  p	## Previous window
+- Prefix  n	## Next window
+- Prefix  space 	## Toggle windows
+- Prefix  0 ... 9
 
-#Prefix c	## Create window
+# PANES
+- Prefix  x	## Close pane 	
+- Prefix  ;	## Toggle last active pane
+- Prefix  - or _
+- Prefix  | or \
 
-#Prefix  ,	## Rename current window
+# COPY MODE 
+- Prefix  [	 ## Enter copy mode
 
-#Prefix  &	## Close current window
+- q	 ## Quit mode
+- g	 ## Go to top line
+- G	 ## Go to bottom line
+- /	 ## Search forward
+- ?	 ## Search backward
+- n	 ## Next keyword occurance
+- N	 ## Previous keyword occurance
+- v   ##begins selection / visual mode
+- C-v ## toggles between blockwise visual mode and visual mode
+- H   ##jumps to the start of line
+- L   ##jumps to the end of line
+- y   ##copies the selection to the top paste-buffer
+- Escape ##cancels the current operation
 
-#Prefix  p	## Previous window
-
-#Prefix  n	## Next window
-
-#Prefix  space 	## Toggle windows
-
-#Prefix  0 ... 9
-
-#PANES
-
-#Prefix  x	## Close pane 	
-
-#Prefix  ;	## Toggle last active pane
-
-#Prefix  - or _
-
-#Prefix  | or \
-
-#COPY MODE 
-
-#Prefix  [	 ## Enter copy mode
-
-#q	 ## Quit mode
-
-#g	 ## Go to top line
-
-#G	 ## Go to bottom line
-
-#/	 ## Search forward
-
-#?	 ## Search backward
-
-#n	 ## Next keyword occurance
-
-#N	 ## Previous keyword occurance
-
-#v   ##begins selection / visual mode
-
-#C-v ## toggles between blockwise visual mode and visual mode
-
-#H   ##jumps to the start of line
-
-#L   ##jumps to the end of line
-
-#y   ##copies the selection to the top paste-buffer
-
-#Escape ##cancels the current operation
-
-#Others
+# Others
 
  - `<prefix> e` opens `~/.tmux.conf.local` with the editor defined by the
    `$EDITOR` environment variable (defaults to `vim` when empty)
@@ -231,7 +207,7 @@ tmux_conf_theme_right_separator_sub='\uE0B3'
 ```
 ### Additional Configurations
 
-#Add the following to your ~/.bashrc:
+# Add the following to your ~/.bashrc:
 
 ```
   HISTCONTROL=ignoredups:erasedups 
@@ -243,26 +219,26 @@ tmux_conf_theme_right_separator_sub='\uE0B3'
 
 
 
-###Oh-My-Zsh Favorite themes
+### Oh-My-Zsh Favorite themes
 
 Edit in ~/.zshrc
 
-#Tjkirch 
+# Tjkirch 
 ```
 https://github.com/santiandres33/ohmyzsh/blob/master/themes/tjkirch.zsh-theme
 ```
 
-#Xiong-chiamiov-plus
+# Xiong-chiamiov-plus
 ```
 https://github.com/santiandres33/ohmyzsh/blob/master/themes/xiong-chiamiov-plus.zsh-theme
 ```
 
-#Kali
+# Kali
 ```
 https://github.com/santiandres33/ohmyzsh/blob/master/custom/themes/kali.zsh-theme
 ```
 
-###Oh-My-Zsh favorite plugins
+### Oh-My-Zsh favorite plugins
  plugins=(nmap git docker zsh-completions zsh-autosuggestions)
  
  
