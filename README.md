@@ -223,7 +223,6 @@ https://github.com/santiandres33/ohmyzsh/blob/master/themes/xiong-chiamiov-plus.
 ```
 https://github.com/santiandres33/ohmyzsh/blob/master/custom/themes/kali.zsh-theme
 ```
-
 ## Oh-My-Zsh favorite plugins
  plugins=(nmap git docker zsh-completions zsh-autosuggestions)
  
