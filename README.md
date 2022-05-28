@@ -198,21 +198,15 @@ tmux_conf_theme_right_separator_main='\uE0B2'
 tmux_conf_theme_right_separator_sub='\uE0B3'
 ```
 ## Additional Configurations
-###
--
--
-### Add the following to your ~/.bashrc:
-```
-  HISTCONTROL=ignoredups:erasedups 
-  HISTSIZE=50000
-  SAVEHIST=20000
-  #Keeping the same history along different terminal panes/windows/tabs
-  #PROMPT_COMMAND="${PROMPT_COMMAND:+$PROMPT_COMMAND$'\n'}history -a; history -c; history -r"
-```
+### Manual
+-Transparency
+-Shortcut switch tabs
+
+### Custom ~/.zshrc 
+Copied in Oh-My-Zsh installation script
+https://github.com/santiandres33/ohmyzsh/blob/master/templates/zshrc.zsh-template
 
 ## Oh-My-Zsh Favorite themes
-
-Edit in ~/.zshrc
 
 ### Tjkirch 
 ```
