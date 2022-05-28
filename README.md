@@ -15,7 +15,7 @@ Installation
 Method Curl Command 
 
 ```
-sh -c $(curl -fsSL https://raw.githubusercontent.com/santiandres33/ohmyzsh/master/tools/install.sh)
+REPO=santiandres33/ohmyzsh sh -c $(curl -fsSL https://raw.githubusercontent.com/santiandres33/ohmyzsh/master/tools/install.sh)
 ```
 
 Note that any previous .zshrc will be renamed to .zshrc.pre-oh-my-zsh. After installation, you can move the configuration you want to preserve into the new .zshrc.
