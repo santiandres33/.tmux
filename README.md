@@ -208,22 +208,22 @@ https://github.com/santiandres33/ohmyzsh/blob/master/templates/zshrc.zsh-templat
 
 ## Oh-My-Zsh Favorite themes
 
-### Tjkirch 
+#### Tjkirch 
 ```
 https://github.com/santiandres33/ohmyzsh/blob/master/themes/tjkirch.zsh-theme
 ```
-### Xiong-chiamiov-plus
+#### Xiong-chiamiov-plus
 ```
 https://github.com/santiandres33/ohmyzsh/blob/master/themes/xiong-chiamiov-plus.zsh-theme
 ```
-### Kali
+#### Kali
 ```
 https://github.com/santiandres33/ohmyzsh/blob/master/custom/themes/kali.zsh-theme
 ```
 ## Oh-My-Zsh favorite plugins
  plugins=(nmap git docker zsh-completions zsh-autosuggestions)
  
-### Install zsh-completions Debian
+#### Install zsh-completions Debian
 https://github.com/zsh-users/zsh-completions
 ```
 git clone https://github.com/zsh-users/zsh-completions ${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions
@@ -231,7 +231,7 @@ git clone https://github.com/zsh-users/zsh-completions ${ZSH_CUSTOM:-${ZSH:-~/.o
 ```
  fpath+=${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions/src
 ```
-### Install zsh-autosuggestions
+#### Install zsh-autosuggestions
 ```
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 ```
