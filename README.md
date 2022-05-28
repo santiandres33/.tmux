@@ -229,5 +229,21 @@ https://github.com/santiandres33/ohmyzsh/blob/master/custom/themes/kali.zsh-them
 ## Oh-My-Zsh favorite plugins
  plugins=(nmap git docker zsh-completions zsh-autosuggestions)
  
- 
- 
+### Install zsh-completions Debian
+https://github.com/zsh-users/zsh-completions
+```
+git clone https://github.com/zsh-users/zsh-completions ${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions
+```
+```
+ fpath+=${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions/src
+```
+### Install zsh-autosuggestions
+```
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+```
+```
+plugins=( 
+    # other plugins...
+    zsh-autosuggestions
+)
+```
