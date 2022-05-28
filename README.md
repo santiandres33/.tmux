@@ -203,23 +203,16 @@ tmux_conf_theme_right_separator_sub='\uE0B3'
 -Shortcut switch tabs
 
 ### Custom ~/.zshrc 
-Copied in Oh-My-Zsh installation script
+Copied during Oh-My-Zsh installation 
 https://github.com/santiandres33/ohmyzsh/blob/master/templates/zshrc.zsh-template
 
 ## Oh-My-Zsh Favorite themes
-
 #### Tjkirch 
-```
-https://github.com/santiandres33/ohmyzsh/blob/master/themes/tjkirch.zsh-theme
-```
+``` https://github.com/santiandres33/ohmyzsh/blob/master/themes/tjkirch.zsh-theme ```
 #### Xiong-chiamiov-plus
-```
-https://github.com/santiandres33/ohmyzsh/blob/master/themes/xiong-chiamiov-plus.zsh-theme
-```
+``` https://github.com/santiandres33/ohmyzsh/blob/master/themes/xiong-chiamiov-plus.zsh-theme ```
 #### Kali
-```
-https://github.com/santiandres33/ohmyzsh/blob/master/custom/themes/kali.zsh-theme
-```
+```https://github.com/santiandres33/ohmyzsh/blob/master/custom/themes/kali.zsh-theme ```
 ## Oh-My-Zsh favorite plugins
  plugins=(nmap git docker zsh-completions zsh-autosuggestions)
  
