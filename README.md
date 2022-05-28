@@ -167,7 +167,7 @@ you can adjust to alter different behaviors. Pressing `<prefix> e` will open
 `~/.tmux.conf.local` with the editor defined by the `$EDITOR` environment
 variable (defaults to `vim` when empty).
 
-### Enabling the Powerline look
+### Enabling the Powerline look MacOS
 
 To make use of these symbols, there are several options:
 
@@ -198,6 +198,9 @@ tmux_conf_theme_right_separator_main='\uE0B2'
 tmux_conf_theme_right_separator_sub='\uE0B3'
 ```
 ## Additional Configurations
+###
+-
+-
 ### Add the following to your ~/.bashrc:
 ```
   HISTCONTROL=ignoredups:erasedups 
