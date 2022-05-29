@@ -200,7 +200,10 @@ tmux_conf_theme_right_separator_sub='\uE0B3'
 ## Additional Configurations
 ### Manual
 -Transparency
--Shortcut switch tabs
+
+-Shortcut to switch tabs
+
+-Show bold text in bright colors
 
 ### Custom ~/.zshrc 
 Copied during Oh-My-Zsh installation 
