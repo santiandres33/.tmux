@@ -12,13 +12,26 @@ Oh My Zsh is installed by running one of the following commands in your terminal
 Installation
 ------------
 
-Method Curl Command 
+## Getting Started
 
-```
-REPO=santiandres33/ohmyzsh sh -c $(curl -fsSL https://raw.githubusercontent.com/santiandres33/ohmyzsh/master/tools/install.sh)
-```
+### Prerequisites
 
-Note that any previous .zshrc will be renamed to .zshrc.pre-oh-my-zsh. After installation, you can move the configuration you want to preserve into the new .zshrc.
+- A Unix-like operating system: macOS, Linux, BSD. On Windows: WSL2 is preferred, but cygwin or msys also mostly work.
+- [Zsh](https://www.zsh.org) should be installed (v4.3.9 or more recent is fine but we prefer 5.0.8 and newer). If not pre-installed (run `zsh --version` to confirm), check the following wiki instructions here: [Installing ZSH](https://github.com/ohmyzsh/ohmyzsh/wiki/Installing-ZSH)
+- `curl` or `wget` should be installed
+- `git` should be installed (recommended v2.4.11 or higher)
+
+### Basic Installation
+
+Oh My Zsh is installed by running one of the following commands in your terminal. You can install this via the command-line with either `curl`, `wget` or another similar tool.
+
+| Method    | Command                                                                                           |
+| :-------- | :------------------------------------------------------------------------------------------------ |
+| **curl**  | `REPO=santiandres33/ohmyzsh sh -c "$(curl -fsSL https://raw.githubusercontent.com/santiandres33/ohmyzsh/master/tools/install.sh)"` |
+| **wget**  | `REPO=santiandres33/ohmyzsh sh -c "$(wget -O- https://raw.githubusercontent.com/santiandres33/ohmyzsh/master/tools/install.sh)"`   |
+| **fetch** | `REPO=santiandres33/ohmyzsh sh -c "$(fetch -o - https://raw.githubusercontent.com/santiandres33/ohmyzsh/master/tools/install.sh)"` |
+
+_Note that any previous `.zshrc` will be renamed to `.zshrc.pre-oh-my-zsh`. After installation, you can move the configuration you want to preserve into the new `.zshrc`._
 
 .Oh My Tmux
 =====
