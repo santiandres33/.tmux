@@ -12,8 +12,6 @@ Oh My Zsh is installed by running one of the following commands in your terminal
 Installation
 ------------
 
-## Getting Started
-
 ### Prerequisites
 
 - A Unix-like operating system: macOS, Linux, BSD. On Windows: WSL2 is preferred, but cygwin or msys also mostly work.
