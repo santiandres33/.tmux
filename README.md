@@ -228,7 +228,7 @@ https://github.com/santiandres33/ohmyzsh/blob/master/templates/zshrc.zsh-templat
 #### Kali
 ```https://github.com/santiandres33/ohmyzsh/blob/master/custom/themes/kali.zsh-theme ```
 ## Oh-My-Zsh favorite plugins
- plugins=(nmap git docker zsh-completions zsh-autosuggestions)
+ plugins=(nmap git docker zsh-completions zsh-autosuggestions zsh-syntax-highlighting)
  
 #### Install zsh-completions Debian
 https://github.com/zsh-users/zsh-completions
@@ -247,4 +247,13 @@ plugins=(
     # other plugins...
     zsh-autosuggestions
 )
+```
+#### Install
+##### MacOS
+```
+brew install zsh-syntax-highlighting
+```
+##### Debian
+```
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 ```
