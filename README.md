@@ -248,12 +248,12 @@ plugins=(
     zsh-autosuggestions
 )
 ```
-#### Install
+#### Install Syntax Highlighting
 ##### MacOS
 ```
 brew install zsh-syntax-highlighting
 ```
-##### Debian Syntax Highlighting
+##### Debian 
 ```
 $ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $ZSH_CUSTOM/plugins/zsh-syntax-highlighting
 ```
