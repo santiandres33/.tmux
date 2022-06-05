@@ -230,7 +230,7 @@ https://github.com/santiandres33/ohmyzsh/blob/master/templates/zshrc.zsh-templat
 ## Oh-My-Zsh favorite plugins
  plugins=(nmap git docker zsh-completions zsh-autosuggestions zsh-syntax-highlighting)
  
-#### Install zsh-completions Debian
+#### Install zsh-completions Debian/OSX
 https://github.com/zsh-users/zsh-completions
 ```
 git clone https://github.com/zsh-users/zsh-completions ${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions
@@ -238,17 +238,12 @@ git clone https://github.com/zsh-users/zsh-completions ${ZSH_CUSTOM:-${ZSH:-~/.o
 ```
  fpath+=${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions/src
 ```
-#### Install zsh-autosuggestions
+#### Install zsh-autosuggestions Debian/OSX
 ```
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 ```
 
-#### Install Syntax Highlighting
-##### MacOS
-```
-brew install zsh-syntax-highlighting
-```
-##### Debian 
+#### Install Syntax Highlighting Debian/OSX 
 ```
 $ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $ZSH_CUSTOM/plugins/zsh-syntax-highlighting
 ```
