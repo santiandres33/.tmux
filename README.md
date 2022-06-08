@@ -212,9 +212,14 @@ tmux_conf_theme_right_separator_sub='\uE0B3'
 ### Manual
 -Transparency
 
--Shortcut to switch tabs
+-Shortcuts to switch tabs
 
 -Show bold text in bright colors
+
+-Set up trash automatic removal and aliases, uncomment https://github.com/santiandres33/ohmyzsh/blob/master/templates/zshrc.zsh-template
+```
+sudo apt install trash-cli
+```
 
 ### Custom ~/.zshrc 
 Copied during Oh-My-Zsh installation 
