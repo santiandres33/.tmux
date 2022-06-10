@@ -209,21 +209,28 @@ tmux_conf_theme_right_separator_main='\uE0B2'
 tmux_conf_theme_right_separator_sub='\uE0B3'
 ```
 ## Additional Configurations
+### Custom zsh profile 
+Copied during Oh-My-Zsh installation 
+https://github.com/santiandres33/ohmyzsh/blob/master/templates/zshrc.zsh-template
+
 ### Manual
--Transparency
+-In terminal preferences ajust "Transparency"
 
--Shortcuts to switch tabs
+-In terminal preferences shortcuts change "Switch tabs"
 
--Show bold text in bright colors
+-In terminal preferences select "Show bold text in bright colors"
+
+-Ubuntu, comment line 5 in zshrc.zsh-template
+```
+TERM=screen-256color
+```
 
 -Set up trash automatic removal and aliases, uncomment https://github.com/santiandres33/ohmyzsh/blob/master/templates/zshrc.zsh-template
 ```
 sudo apt install trash-cli
 ```
 
-### Custom ~/.zshrc 
-Copied during Oh-My-Zsh installation 
-https://github.com/santiandres33/ohmyzsh/blob/master/templates/zshrc.zsh-template
+
 
 ## Oh-My-Zsh Favorite themes
 #### Tjkirch 
