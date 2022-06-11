@@ -14,7 +14,7 @@ bind-key C-f send-prefix
 # Enable mouse mode (tmux 2.1 and above)
 set -g mouse on
 
-set-option -g history-limit 5000
+set-option -g history-limit 50000
 
 bind-key "|" split-window -fh -c "#{pane_current_path}"
 bind-key "\\" split-window -h -c "#{pane_current_path}"
